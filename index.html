@@ -213,7 +213,7 @@
      </section>
 
      <footer>
-        <h3>©️2025, Made with ❤️ by MED-007</h3>
+        <p>&copy; <span id="current-year"></span> MED-007 | All Rights Reserved</p>
         <div class="box-icons">
             <a href="https://www.youtube.com/@MED_Laaguidi" target="_blank"><i class='bx bxl-youtube'></i></a>
             <a href="https://github.com/MED-007" target="_blank"><i class='bx bxl-github' ></i></a>
@@ -221,6 +221,9 @@
         </div>
      </footer>
 
+    <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
 
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
 
