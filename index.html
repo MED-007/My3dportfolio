@@ -15,7 +15,7 @@
     data-aos-easing="linear"
     data-aos-duration="1500">
         <div class="logo">MED-007</div>
-        <button class="contact-btn"><b>Contact</b></button>
+        <button class="contact-btn" onclick="scrollToContact()"><b>Contact</b></button>
     </header>
 
     <main>
@@ -135,7 +135,7 @@
 
 
     <!-- CONTACT SECTION -->
-     <section class="contact-section" >
+     <section class="contact-section" id="contact-section">
         <div class="section-header" data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="1500">
@@ -173,6 +173,7 @@
                     <a href="https://www.instagram.com/med_l_007/" target="_blank">Instagram</a>
                     <a href="https://web.facebook.com/mohammed.laaguidi/" target="_blank">Facebook</a>
                     <a href="https://med007.gumroad.com/" target="_blank">Gumroad</a>
+
                 </div>
 
             </div>
@@ -244,5 +245,12 @@
     </script>
 
     <script src="app.js"></script>
+    <script>
+    function scrollToContact() {
+        document.getElementById('contact-section').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+</script>
 </body>
 </html>
