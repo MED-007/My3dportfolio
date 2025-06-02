@@ -221,6 +221,52 @@
         </div>
      </footer>
 
+    <style>
+    .glass-message {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        font-size: 10px;
+        transform: translateX(-50%);
+        padding: 15px 15px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        font-weight: bold;
+        z-index: 1000;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+        max-width: 100vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .glass-message img {
+        height: 20px;
+        flex-shrink: 0;
+    }
+    </style>
+
+
+    <div class="glass-message" id="mobile-warning" style="display: none;">
+    <img src="tasto-10-architetto-fran-01.svg" alt="Phone Icon">
+    For a better experience, please open this website from a PC or tablet.
+    </div>
+
+    <script>
+    window.onload = function () {
+        if (window.innerWidth <= 768) {
+        document.getElementById("mobile-warning").style.display = "flex";
+        }
+    };
+    </script>
+    
     <script>
     document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
