@@ -9,12 +9,17 @@
     <link rel="icon" href="69igBua5_400x400.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
     <header data-aos="fade-down"
     data-aos-easing="linear"
     data-aos-duration="1500">
         <div class="logo"> <img src="waaa-1922.png"width=150px></div>
+        <button id="music-toggle" class="music-btn">
+        <i class='bx bx-play' id="music-icon"></i>
+        </button>
         <button class="contact-btn" onclick="scrollToContact()"><b>Contact</b></button>
     </header>
 
@@ -258,6 +263,29 @@
     <img src="tasto-10-architetto-fran-01.svg" alt="Phone Icon">
     For a better experience, please open this website from a PC or tablet.
     </div>
+
+
+    <script>
+    const music = document.getElementById("bg-music");
+    const musicBtn = document.getElementById("music-toggle");
+    const musicIcon = document.getElementById("music-icon");
+
+    let isPlaying = false;
+    musicBtn.addEventListener("click", () =>{
+        if (isPlaying) {
+            music.pause();
+            musicIcon.classList.remove('bx-pause');
+            musicIcon.classList.add('bx-play');
+        } else {
+            music.play();
+            musicIcon.classList.remove('bx-play');
+            musicIcon.classList.add('bx-pause');
+        }
+        isPlaying = !isPlaying;
+    });
+</script>
+    
+    
 
     <script>
     window.onload = function () {
